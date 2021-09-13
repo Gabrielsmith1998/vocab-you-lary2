@@ -31,7 +31,7 @@ const navEvents = (user) => {
   });
 
   document.querySelector('#sort-vocab').addEventListener('click', () => {
-    vocabAbc().then(showVocab);
+    vocabAbc(user).then(showVocab);
   });
 
   document.querySelector('#logout-button')

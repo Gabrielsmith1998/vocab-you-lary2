@@ -9,6 +9,7 @@ const showVocab = (array) => {
       <h5 class="card-title">${vocab.title}</h5>
       <h6 class="card-subtitle mb-2 text-muted">${vocab.description}</h6>
       <h6 class="card-subtitle mb-2 text-muted">${vocab.language}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">${vocab.timeSubmitted || ''}</h6>
       <button class="btn btn-info" id="edit-vocab-btn--${vocab.firebaseKey}">Edit Vocab</button>
       <button class="btn btn-danger" id="delete-vocab--${vocab.firebaseKey}">Delete Vocab</button>
     </div>
