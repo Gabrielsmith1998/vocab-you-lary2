@@ -11,8 +11,8 @@ const domEvents = (uid) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('submit-vocab')) {
       e.preventDefault();
-      const today = new Date();
-      console.warn(today, 1000);
+      const today = new Date().toLocaleString();
+      console.warn('time submited', today, 1000);
       const vocabObject = {
         title: document.querySelector('#title').value,
         description: document.querySelector('#description').value,
