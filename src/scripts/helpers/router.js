@@ -1,17 +1,16 @@
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 import 'firebase/auth';
-import loginButton from '../components/loginButton';
+import loginButton from '../components/buttons/loginButton';
 import firebaseConfig from '../../api/apiKeys';
 import startApp from '../views/startApp';
 
 const checkLoginStatus = () => {
+  // This line initializes your firebase app using the values from your .env file
   firebase.initializeApp(firebaseConfig);
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      // person is logged in do something...
       startApp(user);
     } else {
-      // person is NOT logged in
       loginButton();
     }
   });
