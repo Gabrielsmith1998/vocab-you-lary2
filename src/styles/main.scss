@@ -1,9 +1,11 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 
 
 body {
-  background-color: darkseagreen;
+  background-image: url("https://i.imgur.com/7IMfjSL.gif");
   color: rgb(103, 138, 74);
   text-align: center;
   margin-top: 100px;
@@ -24,12 +26,26 @@ body {
 
 #vocab {
   display: flex;
+  justify-content: center;
   flex-flow: row wrap;
   margin: auto;
 }
 
 .card {
   margin: 5px;
+  background-color: black;
+  border-style: solid;
+  border-color: white;
+
+
+  .card-title {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .card-data {
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+  }
 }
 
 .fa-autoprefixer {

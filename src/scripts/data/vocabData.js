@@ -52,18 +52,18 @@ const getTechThree = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const deleteVocab = (firebaseKey) => new Promise((resolve, reject) => {
+const deleteVocab = (firebaseKey, uid) => new Promise((resolve, reject) => {
   axios.delete(`${dbUrl}/vocab/${firebaseKey}.json`)
     .then(() => {
-      getVocab().then(resolve);
+      getVocab(uid).then(resolve);
     })
     .catch(reject);
 });
 
-const vocabAbc = () => new Promise((resolve, reject) => {
-  getVocab()
+const vocabAbc = (uid) => new Promise((resolve, reject) => {
+  getVocab(uid)
     .then((vocabArray) => {
-      const abcVocab = vocabArray.sort();
+      const abcVocab = vocabArray;
       resolve(abcVocab);
     }).catch(reject);
 });

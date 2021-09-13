@@ -6,7 +6,6 @@ import domEvents from '../helpers/vocabEvents';
 import showVocab from '../vocab';
 
 const startApp = (user) => {
-  console.warn(user);
   domBuilder();
   domEvents(user.uid);
   navBar();
