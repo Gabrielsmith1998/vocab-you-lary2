@@ -17,6 +17,7 @@ const domEvents = (uid) => {
         title: document.querySelector('#title').value,
         description: document.querySelector('#description').value,
         language: document.querySelector('#language').value,
+        timeSubmitted: today,
         uid
       };
       createVocab(vocabObject).then((vocabArray) => showVocab(vocabArray));
