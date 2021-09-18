@@ -3,8 +3,7 @@ import {
   getTechOne,
   getTechThree,
   getTechTwo,
-  getVocab,
-  vocabAbc
+  getVocab
 } from '../data/vocabData';
 import showVocab from '../vocab';
 import signOut from './signOut';
@@ -28,10 +27,6 @@ const navEvents = (user) => {
 
   document.querySelector('#tech-3').addEventListener('click', () => {
     getTechThree(user).then(showVocab);
-  });
-
-  document.querySelector('#sort-vocab').addEventListener('click', () => {
-    vocabAbc(user).then(showVocab);
   });
 
   document.querySelector('#logout-button')

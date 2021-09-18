@@ -34,22 +34,28 @@ const updateVocab = (vocabObj) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getTechOne = () => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/vocab.json?orderBy="language"&equalTo="Tech 1"`)
-    .then((response) => resolve(Object.values(response.data)))
-    .catch(reject);
+const getTechOne = (user) => new Promise((resolve, reject) => {
+  getVocab(user)
+    .then((vocabArray) => {
+      const techOneVocab = vocabArray.filter((vocab) => vocab.language === 'Tech 1');
+      resolve(techOneVocab);
+    }).catch(reject);
 });
 
-const getTechTwo = () => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/vocab.json?orderBy="language"&equalTo="Tech 2"`)
-    .then((response) => resolve(Object.values(response.data)))
-    .catch(reject);
+const getTechTwo = (user) => new Promise((resolve, reject) => {
+  getVocab(user)
+    .then((vocabArray) => {
+      const techTwoVocab = vocabArray.filter((vocab) => vocab.language === 'Tech 2');
+      resolve(techTwoVocab);
+    }).catch(reject);
 });
 
-const getTechThree = () => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/vocab.json?orderBy="language"&equalTo="Tech 3"`)
-    .then((response) => resolve(Object.values(response.data)))
-    .catch(reject);
+const getTechThree = (user) => new Promise((resolve, reject) => {
+  getVocab(user)
+    .then((vocabArray) => {
+      const techThreeVocab = vocabArray.filter((vocab) => vocab.language === 'Tech 3');
+      resolve(techThreeVocab);
+    }).catch(reject);
 });
 
 const deleteVocab = (firebaseKey, uid) => new Promise((resolve, reject) => {

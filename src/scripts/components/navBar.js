@@ -17,9 +17,6 @@ const navBar = () => {
 <li class="nav-item">
 <a class="nav-link" href="#" id="tech-3">Tech 3</a>
 </li>
-<li class="nav-item">
-<a class="nav-link" href="#" id="sort-vocab">ABC</a>
-</li>
   <div id="logout-button">
   <button id="google-auth" class="btn btn-danger">SIGN OUT</button>
   </div>
