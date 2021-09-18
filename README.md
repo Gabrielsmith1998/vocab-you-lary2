@@ -17,5 +17,5 @@ The user may be someone who wants to keep track of certian technoligies they hav
 * Sort By Tech in navBar
 
 ## Screenshot
-<img width="1440" alt="Screen Shot 2021-09-17 at 8 11 33 PM" src="https://user-images.githubusercontent.com/86996271/133867229-987e8ed8-7d7a-4aa6-be39-a167c779fb08.png">
+<img width="1440" alt="Screen Shot 2021-09-17 at 8 13 44 PM" src="https://user-images.githubusercontent.com/86996271/133867277-54f5b1db-5d7d-45a3-ac21-113a239495a4.png">
 
